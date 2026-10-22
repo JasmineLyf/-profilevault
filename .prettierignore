@@ -1,0 +1,9 @@
+node_modules/
+.tools/
+dist/
+release/
+test-results/
+playwright-report/
+docs/validation/
+docs/evaluation/
+package-lock.json

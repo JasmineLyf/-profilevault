@@ -1,0 +1,44 @@
+{
+  "name": "profilevault",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs --watch",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "package": "node scripts/package.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "pdfjs-dist": "5.4.149",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@eslint/js": "9.37.0",
+    "@playwright/test": "1.64.1",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@types/chrome": "0.1.24",
+    "@types/node": "24.7.2",
+    "@types/react": "19.1.16",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.37.0",
+    "jsdom": "27.0.1",
+    "prettier": "3.6.2",
+    "react-select": "5.10.2",
+    "sharp": "0.34.4",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.1",
+    "vite": "7.1.9",
+    "vitest": "3.2.4"
+  }
+}

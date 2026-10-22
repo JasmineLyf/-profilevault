@@ -1,0 +1,48 @@
+{
+  "evaluation": {
+    "visibleFields": 135,
+    "standardFields": 86,
+    "preselected": 81,
+    "precision": 1,
+    "coverage": 1,
+    "repeatSections": 4,
+    "forbiddenPreselected": 0,
+    "independentHumanReview": "pending"
+  },
+  "performance": {
+    "100": {
+      "medianMs": 105.56,
+      "runsMs": [
+        103.88,
+        105.23,
+        105.56,
+        121.08,
+        156.62
+      ]
+    },
+    "500": {
+      "medianMs": 477.6,
+      "runsMs": [
+        466,
+        472.66,
+        477.6,
+        490.47,
+        493
+      ]
+    },
+    "501": {
+      "medianMs": 462.36,
+      "runsMs": [
+        452.81,
+        460.58,
+        462.36,
+        469.28,
+        515.79
+      ]
+    },
+    "browser": "155.0.4283.62",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12600KF"
+  }
+}

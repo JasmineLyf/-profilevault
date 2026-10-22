@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="UTF-8" /><title>虚构联系表单</title
+  ><style>
+    body {
+      font: 16px sans-serif;
+      margin: 30px;
+    }
+    label {
+      display: block;
+      margin: 12px;
+    }
+    input,
+    select,
+    textarea {
+      min-height: 25px;
+    }
+    fieldset {
+      margin-bottom: 20px;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+  <h1>虚构测试页面 · 不用于真实申请</h1>
+  <form id="contact">
+    <label>姓名 <input id="full" autocomplete="name" /></label
+    ><label>邮箱 <input id="mail" type="email" autocomplete="email" /></label
+    ><label>电话 <input id="phone" type="tel" autocomplete="tel" /></label
+    ><label>邮编 <input id="zip" autocomplete="postal-code" /></label
+    ><label>出生日期 <input id="birth" type="date" autocomplete="bday" /></label
+    ><label>单位名称 <input id="company" autocomplete="organization" /></label
+    ><label>城市 <input id="city" value="网页原有城市" autocomplete="address-level2" /></label
+    ><label
+      >国家
+      <select id="country" autocomplete="country">
+        <option value="">请选择</option>
+        <option value="CN">中国</option>
+        <option value="US">美国</option>
+      </select></label
+    ><label>详细地址 <textarea id="address" autocomplete="address-line1"></textarea></label>
+    <fieldset>
+      <legend>普通业务选项（临时选择）</legend>
+      <label>配送时段 上午 <input id="morning" type="radio" name="delivery" value="am" /></label
+      ><label>配送时段 下午 <input id="afternoon" type="radio" name="delivery" value="pm" /></label
+      ><label>需要纸质目录 <input id="catalog" type="checkbox" /></label>
+    </fieldset>
+    <label>验证码 <input id="otp" autocomplete="email" /></label
+    ><label>信用卡号 <input id="card" autocomplete="cc-number" /></label
+    ><label>护照号 <input id="passport" /></label
+    ><label>同意隐私条款 <input id="agree" type="checkbox" required /></label
+    ><label>密码 <input id="password" type="password" /></label
+    ><label class="hide">邮箱 <input id="hidden" /></label
+    ><label>邮箱 <input id="disabled" disabled /></label><button type="submit">用户提交</button>
+  </form>
+  <iframe title="未扫描子框架" srcdoc="<input autocomplete='email'>"></iframe>
+  <div id="shadow"></div>
+  <output id="submits">0</output>
+  <script>
+    document.getElementById('shadow').attachShadow({ mode: 'open' }).innerHTML =
+      '<input autocomplete="email">';
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('submits').value = String(
+        Number(document.getElementById('submits').value) + 1,
+      );
+    });
+  </script>
+</html>

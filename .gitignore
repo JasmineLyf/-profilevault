@@ -1,0 +1,17 @@
+node_modules/
+test-results/
+playwright-report/
+.test-profiles/
+*.log
+.tools/
+
+# Generated builds and local artifacts
+dist/
+release/*
+!release/profilevault-0.2.1.zip
+!release/SHA256.txt
+docs/validation/*.json
+.env
+.env.*
+*.pem
+*.key
